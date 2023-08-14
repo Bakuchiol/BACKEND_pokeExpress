@@ -3,6 +3,11 @@ const express = require('express');
 // express variable
 const app = express();
 
+// *********************************** MODELS
+const pokemon = require('./models/pokemon')
+
+
+
 
 // middleware -------------------------------------------
 app.set("view engine", "jsx");
@@ -25,8 +30,8 @@ app.get("/", (req,res) => {
     res.send("<h1>Welcome to the Pokemon App!</h1>")
 })
 
-app.get('/veggieTale', (req,res) => {
-    res.render("VeggieTale", {vegetables: vegetables})
+app.get('/pokemon', (req,res) => {
+    res.send(pokemon)
 })
 
 
