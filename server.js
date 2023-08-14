@@ -19,6 +19,12 @@ app.use((req, res, next) => {
     next();
 });
 
+
+// ****************************************** ROUTE
+app.get("/", (req,res) => {
+    res.send("<h1>Welcome to the Pokemon App!</h1>")
+})
+
 app.get('/veggieTale', (req,res) => {
     res.render("VeggieTale", {vegetables: vegetables})
 })
