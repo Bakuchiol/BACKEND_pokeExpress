@@ -35,18 +35,26 @@ app.get('/pokemon', (req,res) => {
     res.render("Index", {pokemon:pokemon})
 })
 
+app.get('pokemon/new', (req,res) => {
+    res.render('New')
+})
+
+// post
+app.post('/pokemon', (req,res) => {
+    pokemon.push(req.body)
+    console.log(pokemon)
+    res.redirect('/pokemon')
+})
+
+
 app.get('/pokemon/:id', async(req, res) => {
     // res.send(pokemon[req.params.id])
     // res.render("Show", {pokemon:[req.params.id]})
     res.render('Show', 
     {pokemon: pokemon[req.params.id]})
-
-
-    // const eachFruit = await Fruit.findById(req.params.id)
-    // await res.render("Show",
-    // {fruit: eachFruit}
-    // )
 });
+
+
 
 
 // ********************************************* SERVER

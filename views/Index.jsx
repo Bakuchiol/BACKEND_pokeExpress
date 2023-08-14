@@ -26,6 +26,8 @@ function Index(props) {
             </ul>
         )
       })}
+      <br />
+      <a href='/pokemon/new'>Add Pokemon</a>
     </div>
   )
 }
