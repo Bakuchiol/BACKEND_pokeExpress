@@ -9,16 +9,23 @@ function Index(props) {
         backgroundColor: "#f5f5f5"
     };
 
+    const aTag = {
+        color: "royalblue",
+        'textDecoration' : 'none'
+    }
+
   return (
     <div>
       <h1 style={myStyle}>See All The Pokemon!</h1>
-      <ul>
       {pokemon.map((poke,i) => {
-        return (
-            <li>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</li>
+          return (
+            <ul  key={i}>
+                <a href={`/pokemon/${i}`} style={aTag} key={i}>
+                    <li key={i}>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</li>
+                </a>
+            </ul>
         )
       })}
-      </ul>
     </div>
   )
 }

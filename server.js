@@ -36,8 +36,10 @@ app.get('/pokemon', (req,res) => {
 })
 
 app.get('/pokemon/:id', async(req, res) => {
-    res.send(pokemon[req.params.id])
-
+    // res.send(pokemon[req.params.id])
+    // res.render("Show", {pokemon:[req.params.id]})
+    res.render('Show', 
+    {pokemon: pokemon[req.params.id]})
 
 
     // const eachFruit = await Fruit.findById(req.params.id)
