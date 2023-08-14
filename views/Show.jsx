@@ -1,9 +1,15 @@
 import React from 'react'
 
 function Show(props) {
+
     const pokemon = props.pokemon
     // const pokemonName = props.pokemon.name
     // const pokemonImg = props.pokemon.img + '.jpg'
+
+    const style = {
+        color: "crimson",
+        'textDecoration' : 'none'
+    }
 
   return (
     <div>
@@ -17,7 +23,7 @@ function Show(props) {
         <img src={pokemon.img + '.jpg'} alt="pokemon" />
 
       <br />
-      <a href='/pokemon'>Go Back</a>
+      <a href='/pokemon' style={style}>Go Back</a>
     </div>
   )
 }

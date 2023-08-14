@@ -6,9 +6,6 @@ const app = express();
 // *********************************** MODELS
 const pokemon = require('./models/pokemon')
 
-
-
-
 // middleware -------------------------------------------
 app.set("view engine", "jsx");
 app.engine("jsx", require("express-react-views").
