@@ -8,18 +8,18 @@ const pokemon = require('./models/pokemon')
 
 // middleware -------------------------------------------
 app.set("view engine", "jsx");
-app.engine("jsx", require("express-react-views").
-createEngine());
+app.engine("jsx", require("express-react-views").createEngine());
 
-app.use(express.json()) //thunderware to get json
+// app.use(express.json()) //thunderware to get json
 
-// ----------- tells express to use middleware
-app.use(express.urlencoded({extended:false}));
 // ---------------- middleware?
 app.use((req, res, next) => {
     console.log('I run for all routes');
     next();
 });
+
+// ----------- tells express to use middleware
+app.use(express.urlencoded({extended:false}));
 
 
 // ****************************************** ROUTE
@@ -32,27 +32,25 @@ app.get('/pokemon', (req,res) => {
     res.render("Index", {pokemon:pokemon})
 })
 
-app.get('pokemon/new', (req,res) => {
-    res.render('New')
+
+app.get('/pokemon/new', (req,res) => {
+    res.render("New")
 })
 
 // post
 app.post('/pokemon', (req,res) => {
     pokemon.push(req.body)
-    console.log(pokemon)
+    // console.log(pokemon)
     res.redirect('/pokemon')
 })
 
 
-app.get('/pokemon/:id', async(req, res) => {
+app.get('/pokemon/:id', (req, res) => {
     // res.send(pokemon[req.params.id])
     // res.render("Show", {pokemon:[req.params.id]})
-    res.render('Show', 
+    res.render("Show", 
     {pokemon: pokemon[req.params.id]})
 });
-
-
-
 
 // ********************************************* SERVER
 app.listen('3000', (req,res) => {
