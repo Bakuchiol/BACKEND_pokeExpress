@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Index({pokemon}) {
+function Index(props) {
 
-    // const pokemon = props.pokemon
+    const pokemon = props.pokemon
 
     const bg = {
         backgroundColor: "#f5f5f5",
@@ -34,16 +34,26 @@ function Index({pokemon}) {
       <ul style={center}>
       {pokemon.map((poke,i) => {
           return (
-                <a href={`/pokemon/${i}`} style={aTag} key={i}>
+            <div className="editPokemon">
+                <a href={`/pokemon/${poke._id}`} style={aTag} key={i}>
                     <li>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</li>
                 </a>
+
+                {/* edit */}
+                <div className="editDelete">
+                    <a href=""></a>
+                </div>
+
+                {/* delete */}
+                <div className="editDelete"></div>
+            </div>
         )
     })}
     </ul>
       <br />
       <a href='/pokemon/new' style={style}>Add Pokemon</a>
-    </div>
-  )
+      </div>
+      )
 }
 
 export default Index

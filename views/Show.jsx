@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Show({pokemon}) {
+function Show(props) {
 
-    // const pokemon = props.pokemon
+    const pokemon = props.pokemon
     // const pokemonName = props.pokemon.name
     // const pokemonImg = props.pokemon.img + '.jpg'
 
