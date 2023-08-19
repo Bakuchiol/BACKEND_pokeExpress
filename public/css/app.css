@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+/* font-family: 'Comic Neue', cursive; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Comic Neue', cursive;
+    /* background-image: url('https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png'); */
+}
+
+.navBar {
+    /* border: solid hotpink; */
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.pokeLogo {
+    height: 70px;
+    margin-left: 40px;
+}
+.link {
+    margin-right: 95px;
+}
+a {
+    text-decoration: none;
+    color: #f5f5f5;
+}
+span {
+    width: 100px;
+    height: 3px;
+}
+span:hover{
+    background-color: crimson;
+    text-shadow: none;
+}
+.pokeball {
+    height: 20px;
+}
+
+/* landing page */
+#landingPage {
+    border: .5px solid crimson;
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/cac7b1b7-b0bd-4e3f-81cd-28b25f259e26/ddyu7wn-b9505e96-0f6c-4a16-bc88-dad10e4f0141.jpg/v1/fill/w_1280,h_907,q_75,strp/pokemon_postcard_by_gobstop123_ddyu7wn-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9OTA3IiwicGF0aCI6IlwvZlwvY2FjN2IxYjctYjBiZC00ZTNmLTgxY2QtMjhiMjVmMjU5ZTI2XC9kZHl1N3duLWI5NTA1ZTk2LTBmNmMtNGExNi1iYzg4LWRhZDEwZTRmMDE0MS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.QSiD3xmwig3YKEo98EuRiY30YonAbz3Mr_r0p22Ob1c');
+    background-size: cover;
+    height: 100vh;
+}
+.sloganBox {
+    /* border: solid crimson; */
+    height: 300px;
+    width: 500px;
+    margin: 140px 0 0 30px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    color: #f5efef;
+    text-shadow: 2px 2px 2px #2a2ae4;
+}
+.slogan {
+    height: 100px;
+}
+.sloganTag {
+    margin-left: -80px;
+}

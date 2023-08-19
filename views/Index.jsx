@@ -1,4 +1,5 @@
 import React from 'react'
+import Default from './layout/Default';
 
 function Index(props) {
 
@@ -29,6 +30,7 @@ function Index(props) {
     }
 
   return (
+    <Default>
     <div style={bg}>
       <h1 style={myStyle}>See All The Pokemon!</h1>
       <ul style={center}>
@@ -57,7 +59,8 @@ function Index(props) {
       <br />
       <a href='/pokemon/new' style={style}>Add Pokemon</a>
       </div>
-      )
+    </Default>
+    )
 }
 
 export default Index
