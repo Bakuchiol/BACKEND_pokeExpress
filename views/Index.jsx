@@ -34,18 +34,22 @@ function Index(props) {
       <ul style={center}>
       {pokemon.map((poke,i) => {
           return (
-            <div className="editPokemon">
+            <div key={i} className="editPokemon">
                 <a href={`/pokemon/${poke._id}`} style={aTag} key={i}>
                     <li>{poke.name.charAt(0).toUpperCase() + poke.name.slice(1)}</li>
                 </a>
 
                 {/* edit */}
                 <div className="editDelete">
-                    <a href=""></a>
+                    <a href={`/pokemon/${poke._id}/edit`}>
+                    <button className='button'>Edit</button>
+                    </a>
                 </div>
 
                 {/* delete */}
-                <div className="editDelete"></div>
+                <form action={`/pokemon/${poke._id}?_method=DELETE`} method="POST">
+                    <input type="submit" value="Delete" className='button'/>
+                </form>
             </div>
         )
     })}

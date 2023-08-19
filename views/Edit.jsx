@@ -2,6 +2,9 @@ import React from 'react'
 import Default from './layout/Default'
 
 function Edit(props) {
+    
+    const pokemon = props.pokemon
+
   return (
     <Default>
         <div id='editFormWrapper'>
@@ -17,7 +20,7 @@ function Edit(props) {
                     <div className="info">
                         <p>Image</p>
                         <br/>
-                        <input type="text" name="name" defaultValue={pokemon.img} className='input'/>
+                        <input type="text" name="img" defaultValue={pokemon.img} className='input'/>
                     </div>
                         <br/>
                     <input type="submit" value="Submit Changes" className='button submit'/>
