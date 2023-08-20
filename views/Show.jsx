@@ -1,34 +1,27 @@
 import React from 'react'
+import Default from './layout/Default'
 
 function Show(props) {
 
     const pokemon = props.pokemon
-    // const pokemonName = props.pokemon.name
-    // const pokemonImg = props.pokemon.img + '.jpg'
-
-    const style = {
-        color: "crimson",
-        'textDecoration' : 'none',
-    }
-    const center = {
-        "textAlign": 'center'
-    }
 
   return (
-    <div style={center}>
-      <h1>Gotta Catch 'Em All!</h1>
-      {/* <h2>
-        {pokemonName.charAt(0).toupperCase() + pokemonName.slice(1)}
-      </h2>
-      <img src={pokemonImg} alt="pokemon" /> */}
-      
+    <Default>
+    <div id='showWrapper'>
+      {/* <h1>Gotta Catch 'Em All!</h1> */}
+
+      <div className="showPokemon">
         <h2>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}</h2>
-        {/* <h2>{pokemon.name}</h2> */}
-        <img src={pokemon.img + '.jpg'} alt="pokemon" />
+        <br />
+        <img src={pokemon.img + '.jpg'} alt="pokemon" className='pokemonImg'/>
+      </div>
 
       <br />
-      <a href='/pokemon' style={style}>Go Back</a>
+      <div className="goBack">
+        <a href='/pokemon' className='addNew'>Go Back</a>
+      </div>
     </div>
+    </Default>
   )
 }
 

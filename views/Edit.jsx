@@ -13,12 +13,12 @@ function Edit(props) {
                 <br />
                 <div className="mainForm">
                     <div className="info">
-                        <p>Name</p>
+                        Name
                         <br/>
                         <input type="text" name="name" defaultValue={pokemon.name} className='input'/>
                     </div>
                     <div className="info">
-                        <p>Image</p>
+                        Image
                         <br/>
                         <input type="text" name="img" defaultValue={pokemon.img} className='input'/>
                     </div>
@@ -26,6 +26,9 @@ function Edit(props) {
                     <input type="submit" value="Submit Changes" className='button submit'/>
                 </div>
             </form>
+        </div>
+        <div className="goBack newBack">
+            <a href='/pokemon' className='addNew'>Go Back</a>
         </div>
     </Default>
   )

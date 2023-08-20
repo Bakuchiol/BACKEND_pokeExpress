@@ -154,3 +154,61 @@ span:hover{
     background-color: #4b0c56;
     color: yellow;
 }
+
+/* SHOW PAGE */
+#showWrapper {
+    padding-top: 100px;
+    text-align: center;
+    font-size: 30px;
+    color: #4b0c56;
+}
+.pokemonImg {
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.337) 0px 5px 15px 0px;
+}
+.showPokemon {
+    border: solid blue;
+}
+.goBack {
+    display: flex;
+    justify-content: center;
+}
+
+/* edit and new page */
+#editFormWrapper {
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+.editForm {
+    border: 1px solid #4b0c56;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.337) 0px 5px 15px 0px;
+    background-color: #ffffffc9;
+    padding: 15px;
+}
+.mainForm {
+    /* border: solid red; */
+    text-align: left;
+    margin: 0 20px 10px 20px;
+}
+.mainForm > * {
+    margin-block-start: 10px;
+}
+.input {
+    height: 30px;
+    width: 100%;
+    /* width: 250px; */
+    font-size: 18px;
+    padding: 8px 0 3px 1px;
+}
+.info {
+    /* border: solid green; */
+    text-align: left;
+}
+.submit {
+    width: 100%;
+}
+.newBack {
+    margin-top: 30px;
+}
