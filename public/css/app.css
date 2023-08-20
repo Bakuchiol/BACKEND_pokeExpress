@@ -74,13 +74,32 @@ span:hover{
 /* INDEX - VIEW ALL */
 #indexWrapper {
     /* border: solid blue; */
-    /* padding: 100px 50px 0 50px; */
-    text-align: center;
+    padding-bottom: 50px;
     z-index: 1;
 }
+.addNewBox {
+    /* border: solid red; */
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
 .addNew {
-    padding-top: 100px;
-    color: #2a2ae4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: .5px solid #2a2ae4; */
+    border-radius: 20px;
+    background-color: #f1e1f4ce;
+    height: 30px;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #4b0c56;
+    z-index: 3;
+}
+.addNew:hover {
+    background-color: #bee5f5ed;
 }
 .pokemonList {
     /* border: solid green; */
@@ -96,6 +115,7 @@ span:hover{
 .editPokemon{
     /* border: .5px solid #4b0c56; */
     border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.337) 0px 5px 15px 0px;
     background-image: url('https://www.pokemoncenter-online.com/static/image/scavio/bg_check_02.png');
     opacity: 80%;
     width: 250px;

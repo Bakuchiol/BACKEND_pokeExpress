@@ -8,9 +8,11 @@ function Index(props) {
   return (
     <Default>
     <div id='indexWrapper'>
-        <a href='/pokemon/new'>
-            <h1  className='addNew'>Add New Pokemon!</h1>
+        <div className="addNewBox">
+        <a href='/pokemon/new' className='addNew'>
+            Add New Pokemon!
         </a>
+        </div>
       <div className="pokemonList">
       <ul className='pokemonInfo'>
       {pokemon.map((poke,i) => {
