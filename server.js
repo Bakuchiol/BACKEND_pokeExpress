@@ -69,6 +69,14 @@ app.get('/pokemon/new', (req,res) => {
     res.render("New")
 })
 
+// *** SEED ***
+// app.get('/pokemon/seed', async(req, res) => {
+//     await Pokemon.deleteMany({});
+//     await Pokemon.create(pokemonData);
+
+//     res.redirect('/pokemon')
+// })
+
 // *** DELETE ***
 app.delete('/pokemon/:id', async(req,res) => {
     try {
