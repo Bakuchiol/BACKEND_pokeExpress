@@ -60,7 +60,7 @@ span:hover{
     text-align: center;
     font-weight: 700;
     font-size: 20px;
-    color: #f5efef;
+    color: #ffffff;
     text-shadow: 2px 2px 2px #2a2ae4;
 }
 .slogan {
@@ -167,7 +167,7 @@ span:hover{
     box-shadow: rgba(0, 0, 0, 0.337) 0px 5px 15px 0px;
 }
 .showPokemon {
-    border: solid blue;
+    /* border: solid blue; */
 }
 .goBack {
     display: flex;
